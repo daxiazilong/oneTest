@@ -46,17 +46,19 @@
                 ad1.appendChild( canvas );
             })
         }
-    }else if($container.id == 'ad2'){}//500*700 的逻辑 ，3500000，思路相同
-        for( let x = 0; x < 10 ; x++ ){
-            for( let y = 0 ; y < 10; y++ ){
-                let canvas = document.createElement('canvas'),
-                ctx = canvas.getContext('2d');
-                canvas.width = 50;
-                canvas.height = 70;
-                ctx.drawImage(img,x*50,y*70,50,70,x*50,y*70,50,70 );
-                ad2.appendChild( canvas );
-            }
-        }
+    }else if($container.id == 'ad2'){//500*700 的逻辑 ，3500000，思路相同
+      img.onload = function(){
+         for( let x = 0; x < 10 ; x++ ){
+             for( let y = 0 ; y < 10; y++ ){
+                 let canvas = document.createElement('canvas'),
+                 ctx = canvas.getContext('2d');
+                 canvas.width = 50;
+                 canvas.height = 70;
+                 ctx.drawImage(img,x*50,y*70,50,70,x*50,y*70,50,70 );
+                 ad2.appendChild( canvas );
+             }
+         }
+       }
  }
 
  /**
