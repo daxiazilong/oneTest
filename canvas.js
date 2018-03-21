@@ -22,6 +22,7 @@
                 canvas.height = 200;
                 ctx.drawImage(img,0,0,200,200,0,0,200,200 );
                 ad1.appendChild( canvas );
+                res(img)
             
             }).then( () => {
                 let canvas = document.createElement('canvas'),
